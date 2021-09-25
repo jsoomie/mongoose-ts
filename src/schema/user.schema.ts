@@ -8,7 +8,7 @@ export const createUserSchema = object({
     name: string().required("Name is required"),
     password: string()
       .required("Password is required")
-      .min(passwordMin, "Password have a minimum of 6 characters.")
+      .min(passwordMin, `Password have a minimum of ${passwordMin} characters.`)
       .matches(pwMatch, "Password can only contain Latin letters."),
     passwordConfirmation: string().oneOf(
       [ref("password"), null],
