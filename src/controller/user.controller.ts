@@ -1,6 +1,7 @@
+import { Response, Request } from "express";
 import { createUser } from "../service/";
 
-export const createUserHandler = async () => {
+export const createUserHandler = async (req: Request, res: Response) => {
   try {
     //Create User Here
   } catch (error) {
