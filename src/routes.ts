@@ -1,7 +1,7 @@
 import { Express, Request, Response } from "express";
-import { validateRequests } from "middleware";
-import { createUserSchema } from "schema";
-import { createUserHandler } from "controller";
+import { validateRequests } from "./middleware";
+import { createUserSchema } from "./schema";
+import { createUserHandler } from "./controller";
 
 export const routes = (app: Express) => {
   // Dev Check

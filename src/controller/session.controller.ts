@@ -1,6 +1,6 @@
 import { Response, Request } from "express";
-import { log } from "logger";
-import { validatePassword } from "service";
+import { log } from "../logger";
+import { validatePassword, createSession } from "../service";
 
 export const createUserSessionHandler = async (req: Request, res: Response) => {
   try {
@@ -11,6 +11,7 @@ export const createUserSessionHandler = async (req: Request, res: Response) => {
     }
 
     // Create a session for user
+    const session = await createSession(user._id, req.get("user-agent") || "");
   } catch (error) {
     const { message } = error as Error;
     log.error(error as Error);

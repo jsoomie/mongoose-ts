@@ -1,6 +1,6 @@
 import { AnySchema } from "yup";
 import { Request, Response, NextFunction } from "express";
-import { log } from "logger";
+import { log } from "../logger";
 
 export const validate =
   (schema: AnySchema) =>

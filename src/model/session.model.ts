@@ -1,5 +1,5 @@
 import { Schema, model, Document } from "mongoose";
-import { UserDocument } from "model";
+import { UserDocument } from "./user.model";
 
 export interface SessionDocument extends Document {
   user: UserDocument["_id"];
