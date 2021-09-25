@@ -1,4 +1,7 @@
 import { Express, Request, Response } from "express";
+import { validateRequests } from "./middleware";
+import { createUserSchema } from "./schema";
+import { createUserHandler } from "./controller";
 
 export const routes = (app: Express) => {
   // Dev Check
@@ -7,6 +10,7 @@ export const routes = (app: Express) => {
 
   // Register
   // POST /api/user
+  app.post("/api/users", validateRequests(createUserSchema), createUserHandler);
 
   // Login
   // POST /api/session
