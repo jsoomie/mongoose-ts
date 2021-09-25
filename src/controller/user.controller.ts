@@ -10,6 +10,6 @@ export const createUserHandler = async (req: Request, res: Response) => {
   } catch (error) {
     const { message } = error as Error;
     log.error(error as Error);
-    return { message: `User Controller: ${message}` };
+    return { message: `createUserHandler: ${message}` };
   }
 };
