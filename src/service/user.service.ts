@@ -1,5 +1,5 @@
 import { DocumentDefinition } from "mongoose";
-import { User, UserDocument } from "../model";
+import { User, UserDocument } from "model";
 
 export const createUser = async (input: DocumentDefinition<UserDocument>) => {
   try {

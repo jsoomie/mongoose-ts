@@ -1,6 +1,6 @@
 import { ConnectOptions, connect } from "mongoose";
 import config from "config";
-import log from "../logger";
+import log from "logger";
 
 export const connection = async () => {
   try {
