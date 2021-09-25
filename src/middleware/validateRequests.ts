@@ -16,7 +16,7 @@ export const validate =
     } catch (err) {
       const { message } = err as Error;
       log.error(message);
-      res.send(message).status(400);
+      res.status(400);
       return { message: `Validate Request: ${message}` };
     }
   };
