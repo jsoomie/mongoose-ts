@@ -1,1 +1,1 @@
-export { createUser } from "./user.service";
+export { createUser, validatePassword } from "./user.service";
